@@ -687,6 +687,10 @@ volumePermissions:
 ## ref: https://github.com/bitnami/charts/blob/main/bitnami/mysql/values.yaml
 ##
 mysql:
+  image:
+      registry: docker.io
+      repository: bitnamilegacy/mysql
+      tag: "9.4.0-debian-12-r1"
   ##add enable metrics
   metrics:
     enabled: true

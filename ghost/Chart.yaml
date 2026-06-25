@@ -17,7 +17,7 @@ dependencies:
   repository: oci://registry-1.docker.io/bitnamicharts
   tags:
   - ghost-database
-  version: 14.x.x
+  version: 14.0.3
 - name: common
   repository: oci://registry-1.docker.io/bitnamicharts
   tags:
