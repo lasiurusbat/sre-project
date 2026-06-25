@@ -688,11 +688,15 @@ volumePermissions:
 ##
 mysql:
   image:
-      registry: docker.io
-      repository: bitnamilegacy/mysql
-      tag: "9.4.0-debian-12-r1"
+    registry: docker.io
+    repository: bitnamilegacy/mysql
+    tag: "9.4.0-debian-12-r1"
   ##add enable metrics
   metrics:
+    image:
+    registry: docker.io
+    repository: bitnamilegacy/mysqld-exporter
+    tag: "0.17.2-debian-12-r16"
     enabled: true
   ## @param mysql.enabled Deploy a MySQL server to satisfy the applications database requirements
   ## To use an external database set this to false and configure the `externalDatabase.*` parameters
