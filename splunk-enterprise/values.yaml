@@ -203,7 +203,7 @@ spec:
   licenseAccepted: true
   extraEnv:
     - name: SPLUNK_GENERAL_TERMS
-      value: "accepted"
+      value: "Y"
   # Storage configuration for /opt/splunk/etc volume
   # To use a StorageClass other than your default StorageClass, specify the storageClassName
   # reference: https://github.com/splunk/splunk-operator/blob/develop/docs/StorageClass.md
