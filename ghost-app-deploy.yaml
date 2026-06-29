@@ -32,8 +32,8 @@ metadata:
 spec:
   project: deploy # Argo CD projects, default is fine for now
   source:
-    repoURL: 'https://github.com/gesselsam96/sre-project.git' # Your GitHub repo
-    targetRevision: master # Git branch
+    repoURL: 'https://github.com/lasiurusbat/sre-project.git' # Your GitHub repo
+    targetRevision: main # Git branch
     path: prometheus # Path inside the repo to Helm chart
     helm:
       valueFiles:
