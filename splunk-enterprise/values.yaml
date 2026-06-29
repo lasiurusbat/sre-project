@@ -199,13 +199,18 @@ clusterManager:
     # periodSeconds: 5
     # failureThreshold: 3
 
+spec:
+  licenseAccepted: true
+  extraEnv:
+    - name: SPLUNK_GENERAL_TERMS
+      value: "accepted"
   # Storage configuration for /opt/splunk/etc volume
   # To use a StorageClass other than your default StorageClass, specify the storageClassName
   # reference: https://github.com/splunk/splunk-operator/blob/develop/docs/StorageClass.md
   etcVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 10Gi
-  # storageClassName: gp2
+    storageClassName: "gpu2-csi"
 
   # Storage configuration for /opt/splunk/var volume
   # To use a StorageClass other than your default StorageClass, specify the storageClassName
@@ -213,7 +218,7 @@ clusterManager:
   varVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 100Gi
-  # storageClassName: gp2
+    storageClassName: "gpu2-csi"
 
   # Set resource requests and limits for Splunk instance pod containers
   # reference: https://github.com/splunk/splunk-operator/blob/develop/docs/CustomResources.md#examples-of-guaranteed-and-burstable-qos
@@ -702,10 +707,6 @@ standalone:
     service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
 
   replicaCount: 1
-
-  extraEnv:
-  - name: SPLUNK_GENERAL_TERMS
-    value: "accepted"
 
   appRepo: {}
     # appsRepoPollIntervalSeconds:
