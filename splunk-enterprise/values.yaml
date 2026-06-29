@@ -210,7 +210,7 @@ spec:
   etcVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 10Gi
-    storageClassName: "gpu2-csi"
+    storageClassName: "gp2-csi"
 
   # Storage configuration for /opt/splunk/var volume
   # To use a StorageClass other than your default StorageClass, specify the storageClassName
@@ -218,7 +218,7 @@ spec:
   varVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 100Gi
-    storageClassName: "gpu2-csi"
+    storageClassName: "gp2-csi"
 
   # Set resource requests and limits for Splunk instance pod containers
   # reference: https://github.com/splunk/splunk-operator/blob/develop/docs/CustomResources.md#examples-of-guaranteed-and-burstable-qos
