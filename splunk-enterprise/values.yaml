@@ -705,7 +705,7 @@ standalone:
 
   extraEnv:
   - name: SPLUNK_GENERAL_TERMS
-    value: "Y"
+    value: "accepted"
 
   appRepo: {}
     # appsRepoPollIntervalSeconds:
