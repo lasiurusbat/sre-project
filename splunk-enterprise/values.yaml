@@ -794,8 +794,8 @@ standalone:
       type: LoadBalancer
       ports:
       - name: new-svc
-      port: 80
-      targetPort: 8000
+        port: 80
+        targetPort: 8000
 
   tolerations: []
 
@@ -886,12 +886,12 @@ ingestorCluster:
   etcVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 10Gi
-  # storageClassName: gp2
+    storageClassName: "gp2-csi"
 
   varVolumeStorageConfig:
     ephemeralStorage: false
     storageCapacity: 100Gi
-  # storageClassName: gp2
+    storageClassName: "gp2-csi"
 
   resources: {}
     # requests:
