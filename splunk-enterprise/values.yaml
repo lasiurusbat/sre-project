@@ -703,6 +703,10 @@ standalone:
 
   replicaCount: 1
 
+  extraEnv:
+  - name: SPLUNK_GENERAL_TERMS
+    value: "Y"
+
   appRepo: {}
     # appsRepoPollIntervalSeconds:
     # defaults:
