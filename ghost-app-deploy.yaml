@@ -24,29 +24,29 @@ spec:
  
 ---
  
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: prometheus # This is the app name you’ll see in Argo UI
-#   namespace: argo # Always in argocd namespace
-# spec:
-#   project: deploy # Argo CD projects, default is fine for now
-#   source:
-#     repoURL: 'https://github.com/gesselsam96/sre-project.git' # Your GitHub repo
-#     targetRevision: master # Git branch
-#     path: prometheus # Path inside the repo to Helm chart
-#     helm:
-#       valueFiles:
-#         - values.yaml # You can specify custom values files
-#   destination:
-#     server: https://kubernetes.default.svc # Your cluster
-#     namespace: app # Namespace to deploy
-#   syncPolicy:
-#     automated:
-#       prune: true    # Remove resources if they are deleted from Git
-#       selfHeal: true # Fix resources if manually changed in the cluster
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus # This is the app name you’ll see in Argo UI
+  namespace: argo # Always in argocd namespace
+spec:
+  project: deploy # Argo CD projects, default is fine for now
+  source:
+    repoURL: 'https://github.com/gesselsam96/sre-project.git' # Your GitHub repo
+    targetRevision: master # Git branch
+    path: prometheus # Path inside the repo to Helm chart
+    helm:
+      valueFiles:
+        - values.yaml # You can specify custom values files
+  destination:
+    server: https://kubernetes.default.svc # Your cluster
+    namespace: app # Namespace to deploy
+  syncPolicy:
+    automated:
+      prune: true    # Remove resources if they are deleted from Git
+      selfHeal: true # Fix resources if manually changed in the cluster
 
-# ---
+---
 
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
