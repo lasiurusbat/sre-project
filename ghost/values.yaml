@@ -114,12 +114,12 @@ ghostUsername: vedad
 ## @param ghostPassword Ghost user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ##
-ghostPassword: "fl4@pk-03gl5fd"
+ghostPassword: ""
 ## @param existingSecret Name of existing secret containing Ghost credentials
 ## NOTE: Must contain key `ghost-password`
 ## NOTE: When it's set, the `ghostPassword` parameter is ignored
 ##
-existingSecret: ""
+existingSecret: ghost-credentials
 ## @param ghostEmail Ghost user email
 ##
 ghostEmail: user@example.com
@@ -714,11 +714,11 @@ mysql:
   ##      https://github.com/bitnami/containers/tree/main/bitnami/mysql/#creating-a-database-on-first-run
   ##      https://github.com/bitnami/containers/tree/main/bitnami/mysql/#creating-a-database-user-on-first-run
   auth:
-    rootPassword: "root"
+    rootPassword: ""
     database: bitnami_ghost
     username: bn_ghost
-    password: "root"
-    existingSecret: ""
+    password: ""
+    existingSecret: ghost-mysql-credentials
   ## MySQL Primary configuration
   ##
   primary:

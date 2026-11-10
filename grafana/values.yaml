@@ -98,10 +98,10 @@ admin:
   user: "admin"
   ## @param admin.password Admin password. If a password is not provided a random password will be generated
   ##
-  password: "admin"
+  password: ""
   ## @param admin.existingSecret Name of the existing secret containing admin password
   ##
-  existingSecret: ""
+  existingSecret: grafana-admin
   ## @param admin.existingSecretPasswordKey Password key on the existing secret
   ##
   existingSecretPasswordKey: password
@@ -116,7 +116,7 @@ smtp:
   user: user
   ## @param smtp.password SMTP password
   ##
-  password: password
+  password: ""
   ## @param smtp.host Custom host for the smtp server
   ## e.g:
   ##   host: mysmtphost.com
