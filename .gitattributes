@@ -1,0 +1,15 @@
+# Language stats on GitHub (Linguist).
+#
+# The chart folders are Helm charts copied from upstream (Bitnami, Splunk Operator). Their
+# templates made GitHub label the whole repository "Go Template", so they are marked vendored.
+# The customised values.yaml in each chart root and the manifests in the repository root are
+# the work here, so they stay in and count as YAML.
+argo-cd/** linguist-vendored
+fluent-bit/** linguist-vendored
+ghost/** linguist-vendored
+grafana/** linguist-vendored
+prometheus/** linguist-vendored
+splunk-enterprise/** linguist-vendored
+splunk-operator/** linguist-vendored
+/*/values.yaml -linguist-vendored
+*.yaml linguist-detectable
